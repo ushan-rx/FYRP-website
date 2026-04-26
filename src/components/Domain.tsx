@@ -1,7 +1,21 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import SectionHeader from "./SectionHeader";
-import { BookOpen, AlertTriangle, Target, FlaskConical, Code2, ChevronDown, ChevronUp } from "lucide-react";
+import {
+  BookOpen,
+  AlertTriangle,
+  Target,
+  FlaskConical,
+  Code2,
+  ChevronDown,
+  ChevronUp,
+  Bot,
+  DatabaseZap,
+  Flame,
+  GitBranch,
+  Network,
+} from "lucide-react";
 
 const TABS = [
   { id: "survey", icon: BookOpen, label: "Literature Survey" },
@@ -13,12 +27,58 @@ const TABS = [
 ];
 
 const TECH_STACK = [
-  { category: "Orchestration", items: ["LangGraph", "FastAPI", "PostgreSQL", "Alembic"] },
-  { category: "AI & LLM", items: ["OpenAI GPT-4", "Anthropic Claude", "LangChain", "Qdrant"] },
-  { category: "Infrastructure", items: ["Kubernetes", "Terraform", "Docker", "Helm"] },
-  { category: "Chaos & Observability", items: ["LitmusChaos", "Prometheus", "OpenTelemetry", "Grafana"] },
-  { category: "CI/CD", items: ["GitHub Actions", "GitHub API", "Workflow Dispatch"] },
-  { category: "Frontend", items: ["Next.js", "React", "TypeScript", "Tailwind CSS"] },
+  {
+    category: "Orchestration",
+    items: [
+      { name: "LangGraph", icon: Network, accent: "rgba(34,211,238,0.18)" },
+      { name: "FastAPI", asset: "/assets/tech/fastapi.svg", accent: "rgba(0,150,136,0.18)" },
+      { name: "PostgreSQL", asset: "/assets/tech/postgresql.svg", accent: "rgba(65,105,225,0.18)" },
+      { name: "Alembic", icon: DatabaseZap, accent: "rgba(245,158,11,0.18)" },
+    ],
+  },
+  {
+    category: "AI & LLM",
+    items: [
+      { name: "Qwen 2.5 - 7B", icon: Bot, accent: "rgba(167,139,250,0.18)" },
+      { name: "LangChain", asset: "/assets/tech/langchain.svg", accent: "rgba(148,163,184,0.18)" },
+      { name: "Qdrant", asset: "/assets/tech/qdrant.svg", accent: "rgba(220,36,76,0.18)" },
+    ],
+  },
+  {
+    category: "Infrastructure",
+    items: [
+      { name: "Kubernetes", asset: "/assets/tech/kubernetes.svg", accent: "rgba(50,108,229,0.18)" },
+      { name: "Terraform", asset: "/assets/tech/terraform.svg", accent: "rgba(132,79,186,0.18)" },
+      { name: "Docker", asset: "/assets/tech/docker.svg", accent: "rgba(36,150,237,0.18)" },
+      { name: "Helm", asset: "/assets/tech/helm.svg", accent: "rgba(15,22,137,0.18)" },
+    ],
+  },
+  {
+    category: "Chaos & Observability",
+    items: [
+      { name: "LitmusChaos", icon: Flame, accent: "rgba(251,113,133,0.18)" },
+      { name: "Prometheus", asset: "/assets/tech/prometheus.svg", accent: "rgba(230,82,44,0.18)" },
+      { name: "OpenTelemetry", asset: "/assets/tech/opentelemetry.svg", accent: "rgba(250,204,21,0.18)" },
+      { name: "Grafana", asset: "/assets/tech/grafana.svg", accent: "rgba(244,104,0,0.18)" },
+    ],
+  },
+  {
+    category: "CI/CD",
+    items: [
+      { name: "GitHub Actions", asset: "/assets/tech/githubactions.svg", accent: "rgba(32,136,255,0.18)" },
+      { name: "GitHub API", asset: "/assets/tech/github.svg", accent: "rgba(148,163,184,0.18)" },
+      { name: "Workflow Dispatch", icon: GitBranch, accent: "rgba(34,211,238,0.18)" },
+    ],
+  },
+  {
+    category: "Frontend",
+    items: [
+      { name: "Next.js", asset: "/assets/tech/nextdotjs.svg", accent: "rgba(148,163,184,0.16)" },
+      { name: "React", asset: "/assets/tech/react.svg", accent: "rgba(97,218,251,0.18)" },
+      { name: "TypeScript", asset: "/assets/tech/typescript.svg", accent: "rgba(49,120,198,0.18)" },
+      { name: "Tailwind CSS", asset: "/assets/tech/tailwindcss.svg", accent: "rgba(6,182,212,0.18)" },
+    ],
+  },
 ];
 
 const OBJECTIVES = [
@@ -322,19 +382,39 @@ export default function Domain() {
                   >
                     {group.category}
                   </h4>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="grid grid-cols-2 gap-3">
                     {group.items.map((item) => (
-                      <span
-                        key={item}
-                        className="px-3 py-1 rounded-full text-sm font-mono"
+                      <div
+                        key={item.name}
+                        className="rounded-xl p-3 flex flex-col items-start gap-3"
                         style={{
                           background: "var(--bg-secondary)",
-                          color: "var(--text-primary)",
                           border: "1px solid var(--border)",
                         }}
                       >
-                        {item}
-                      </span>
+                        <div
+                          className="w-10 h-10 rounded-lg flex items-center justify-center"
+                          style={{ background: item.accent }}
+                        >
+                          {item.asset ? (
+                            <Image
+                              src={item.asset}
+                              alt={`${item.name} logo`}
+                              width={20}
+                              height={20}
+                              className="w-5 h-5 object-contain"
+                            />
+                          ) : item.icon ? (
+                            <item.icon size={18} style={{ color: "var(--text-primary)" }} />
+                          ) : null}
+                        </div>
+                        <span
+                          className="text-sm font-mono leading-snug"
+                          style={{ color: "var(--text-primary)" }}
+                        >
+                          {item.name}
+                        </span>
+                      </div>
                     ))}
                   </div>
                 </div>

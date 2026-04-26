@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import SectionHeader from "./SectionHeader";
 import { Mail, Github, Linkedin, User } from "lucide-react";
 
@@ -123,11 +124,13 @@ export default function AboutUs() {
               >
                 <div className="relative">
                   {/* Try actual photo, fallback to placeholder */}
-                  <img
+                  <Image
                     src={sup.photo}
                     alt={sup.name}
+                    width={72}
+                    height={72}
                     className="rounded-full object-cover shrink-0"
-                    style={{ width: 72, height: 72, border: "2px solid var(--border-strong)" }}
+                    style={{ border: "2px solid var(--border-strong)" }}
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = "none";
                       (e.target as HTMLImageElement).nextElementSibling?.removeAttribute("style");
@@ -188,13 +191,13 @@ export default function AboutUs() {
               >
                 {/* Photo */}
                 <div className="relative mb-4">
-                  <img
+                  <Image
                     src={member.photo}
                     alt={member.name}
+                    width={84}
+                    height={84}
                     className="rounded-full object-cover"
                     style={{
-                      width: 84,
-                      height: 84,
                       border: "2px solid var(--border-strong)",
                     }}
                     onError={(e) => {
@@ -281,12 +284,14 @@ export default function AboutUs() {
           {/* University logo placeholder */}
           <div
             className="w-16 h-16 rounded-xl flex items-center justify-center shrink-0"
-            style={{ background: "rgba(34,211,238,0.08)", border: "1px solid var(--border)" }}
+            style={{ border: "1px solid var(--border)" }}
           >
-            <img
+            <Image
               src="/assets/sliit-logo.png"
               alt="SLIIT Logo"
-              className="w-12 h-12 object-contain"
+              width={48}
+              height={48}
+              className="object-contain"
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = "none";
               }}
