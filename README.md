@@ -115,7 +115,7 @@ Replace `synapseci@example.com` across all components with the real team email.
 | Icons | Lucide React |
 | Fonts | Syne (display) + Space Mono (monospace) + Inter (body) |
 | Theme | Custom CSS variable–based dark/light system |
-| Deployment | Vercel (static export) |
+| Deployment | Vercel |
 
 ---
 
