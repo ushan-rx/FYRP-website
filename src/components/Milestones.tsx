@@ -168,10 +168,10 @@ export default function Milestones() {
                 >
                   {/* Timeline dot */}
                   <div
-                    className="absolute -left-8 top-5 w-3 h-3 rounded-full ring-2"
+                    className="absolute -left-8 top-5 w-3 h-3 rounded-full"
                     style={{
                       background: color,
-                      ringColor: "var(--bg-primary)",
+                      border: "2px solid var(--bg-primary)",
                       boxShadow: `0 0 8px ${color}`,
                       transform: "translateX(-4px)",
                     }}
