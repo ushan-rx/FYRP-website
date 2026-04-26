@@ -25,7 +25,7 @@ const OBJECTIVES = [
   {
     id: "01",
     title: "CI/CD Pipeline Orchestrator",
-    desc: "Design and implement a HITL CI/CD orchestration system with governed policy enforcement, explainability artifacts (ADR/audit trail), and a managed knowledge lifecycle — eliminating black-box pipeline generation.",
+    desc: "Design and implement a HITL CI/CD orchestration system with governed policy enforcement, explainability artifacts (ADR/audit trail), and a managed knowledge lifecycle - eliminating black-box pipeline generation.",
     color: "var(--accent-cyan)",
   },
   {
@@ -43,7 +43,7 @@ const OBJECTIVES = [
   {
     id: "04",
     title: "Automated Chaos & Resilience Validation",
-    desc: "Create a closed-loop chaos engineering agent that selects experiments contextually, executes fault injection via Kubernetes tooling, observes telemetry, and produces a unified resilience score (0–100).",
+    desc: "Create a closed-loop chaos engineering agent that selects experiments contextually, executes fault injection via Kubernetes tooling, observes telemetry, and produces a unified resilience score (0-100).",
     color: "#fb7185",
   },
 ];
@@ -59,10 +59,9 @@ export default function Domain() {
           badge="02 · Domain"
           title="Research "
           highlight="Domain"
-          subtitle="Synapse-CI addresses persistent gaps in DevOps automation — static pipelines, unauditable AI generation, and fragmented tooling across the delivery lifecycle."
+          subtitle="Synapse-CI addresses persistent gaps in DevOps automation - static pipelines, unauditable AI generation, and fragmented tooling across the delivery lifecycle."
         />
 
-        {/* Tab Navigation */}
         <div
           className="flex flex-wrap gap-2 mb-8 p-1 rounded-xl"
           style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}
@@ -84,7 +83,6 @@ export default function Domain() {
           ))}
         </div>
 
-        {/* Tab Content */}
         <div>
           {activeTab === "survey" && (
             <div className="grid lg:grid-cols-2 gap-8">
@@ -96,7 +94,7 @@ export default function Domain() {
                   State of the Art
                 </h3>
                 <p className="leading-relaxed mb-4" style={{ color: "var(--text-secondary)", fontFamily: "var(--font-sans)" }}>
-                  Existing CI/CD automation tools — from Jenkins plugins to GitHub Actions templates — operate on a "logic-at-runtime" model: conditional YAML executes excessive work even for low-risk changes. Research into AI-assisted pipeline generation (e.g., Copilot-based approaches) demonstrates generation capability but lacks governance, policy tracing, and organizational memory.
+                  Existing CI/CD automation tools - from Jenkins plugins to GitHub Actions templates - operate on a &quot;logic-at-runtime&quot; model: conditional YAML executes excessive work even for low-risk changes. Research into AI-assisted pipeline generation (e.g., Copilot-based approaches) demonstrates generation capability but lacks governance, policy tracing, and organizational memory.
                 </p>
                 <p className="leading-relaxed mb-4" style={{ color: "var(--text-secondary)", fontFamily: "var(--font-sans)" }}>
                   In the chaos engineering domain, tools like LitmusChaos and Chaos Mesh provide fault injection primitives but offer no automated experiment selection, scoring normalization, or CI/CD integration for gating decisions. Similarly, test prioritization literature (APFD metric, historical-failure-based ordering) remains largely offline and academic, disconnected from live CI pipelines.
@@ -113,7 +111,6 @@ export default function Domain() {
                   minHeight: "300px",
                 }}
               >
-                {/* Placeholder for literature survey image */}
                 <div className="text-center p-8">
                   <div
                     className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
@@ -142,7 +139,7 @@ export default function Domain() {
                 },
                 {
                   title: "AI generators are black boxes",
-                  desc: "Current AI tools produce YAML without explaining what was included, skipped, or why — making review unreliable and policy enforcement impossible.",
+                  desc: "Current AI tools produce YAML without explaining what was included, skipped, or why - making review unreliable and policy enforcement impossible.",
                   color: "var(--accent-amber)",
                 },
                 {
@@ -197,7 +194,7 @@ export default function Domain() {
                   className="font-mono text-sm mb-6"
                   style={{ color: "var(--accent-cyan)" }}
                 >
-                  // research_problem.md
+                  {"// research_problem.md"}
                 </p>
                 <h3
                   className="font-display font-bold text-2xl lg:text-3xl mb-6 leading-tight"
@@ -213,7 +210,7 @@ export default function Domain() {
                   className="text-lg leading-relaxed"
                   style={{ color: "var(--text-secondary)", fontFamily: "var(--font-sans)" }}
                 >
-                  Modern DevOps teams face a compounding problem: delivery pipelines evolve rapidly while automation remains manual and fragile. AI tools exist but behave as black boxes — generating artifacts without governance, traceability, or organizational context. Synapse-CI addresses this by unifying pipeline planning, IaC generation, test optimization, and resilience validation under a single governed lifecycle, where every decision is auditable and every learning artifact is explicitly managed.
+                  Modern DevOps teams face a compounding problem: delivery pipelines evolve rapidly while automation remains manual and fragile. AI tools exist but behave as black boxes - generating artifacts without governance, traceability, or organizational context. Synapse-CI addresses this by unifying pipeline planning, IaC generation, test optimization, and resilience validation under a single governed lifecycle, where every decision is auditable and every learning artifact is explicitly managed.
                 </p>
               </div>
             </div>
@@ -346,7 +343,6 @@ export default function Domain() {
           )}
         </div>
 
-        {/* System architecture diagram placeholder */}
         <div
           className="mt-12 rounded-2xl overflow-hidden flex flex-col items-center justify-center"
           style={{

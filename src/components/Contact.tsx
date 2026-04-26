@@ -154,7 +154,7 @@ export default function Contact() {
                   className="text-sm"
                   style={{ color: "var(--text-secondary)", fontFamily: "var(--font-sans)" }}
                 >
-                  Your email client should open. We'll get back to you shortly.
+                  Your email client should open. We&apos;ll get back to you shortly.
                 </p>
                 <button
                   onClick={() => { setSubmitted(false); setForm({ name: "", email: "", message: "" }); }}
