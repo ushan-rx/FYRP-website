@@ -42,10 +42,7 @@ export default function Footer() {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="font-mono text-xs transition-colors"
-                style={{ color: "var(--text-muted)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent-cyan)")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
+                className="font-mono text-xs transition-colors text-[var(--text-muted)] hover:text-[var(--accent-cyan)]"
               >
                 {item}
               </a>
