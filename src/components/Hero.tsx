@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { ArrowDown, GitBranch, Shield, Cpu, Zap } from "lucide-react";
+import { ArrowDown, Cpu, GitBranch, Shield, Zap } from "lucide-react";
 
 const TERMINAL_LINES = [
 	{
@@ -49,7 +49,7 @@ const STATS = [
 	{ icon: GitBranch, label: "Pipeline Catalog", value: "Match-First Reuse" },
 	{ icon: Shield, label: "Policy Guardian", value: "Governed Lifecycle" },
 	{ icon: Cpu, label: "Agentic Nodes", value: "7 Specialized" },
-	{ icon: Zap, label: "Resilience Score", value: "0–100 Unified" },
+	{ icon: Zap, label: "Resilience Score", value: "0-100 Unified" },
 ];
 
 export default function Hero() {
@@ -83,10 +83,8 @@ export default function Hero() {
 			className='relative min-h-screen flex flex-col justify-center overflow-hidden'
 			style={{ paddingTop: "6rem" }}
 		>
-			{/* Background grid */}
 			<div className='absolute inset-0 bg-grid opacity-60' />
 
-			{/* Radial glow */}
 			<div
 				className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none'
 				style={{
@@ -95,7 +93,6 @@ export default function Hero() {
 				}}
 			/>
 
-			{/* Decorative lines */}
 			<div
 				className='absolute top-0 left-0 w-px h-full opacity-20'
 				style={{
@@ -114,41 +111,40 @@ export default function Hero() {
 			/>
 
 			<div className='container-xl relative z-10'>
-				<div className='grid lg:grid-cols-2 gap-12 items-center'>
-					{/* Left: Text content */}
+				<div className='flex flex-wrap items-center gap-3 mb-6'>
+					<span className='badge'>Research Project · SLIIT 2025 - 2026</span>
+					<span
+						className='w-2 h-2 rounded-full animate-pulse'
+						style={{ background: "#4ade80" }}
+					/>
+					<span
+						className='font-mono text-xs'
+						style={{ color: "#4ade80" }}
+					>
+						ACTIVE
+					</span>
+				</div>
+
+				<h1
+					className='font-display font-bold leading-[1.02] mb-8 max-w-6xl'
+					style={{
+						fontSize: "clamp(2.1rem, 5.2vw, 4.6rem)",
+						color: "var(--text-primary)",
+					}}
+				>
+					Agent-Driven Automation for Secure Resilient Cloud Native
+					Deployments
+				</h1>
+
+				<div className='grid lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] gap-10 lg:gap-12 items-start'>
 					<div>
-						{/* Badge */}
-						<div className='flex items-center gap-3 mb-6'>
-							<span className='badge'>
-								Research Project · SLIIT 2025 - 2026
-							</span>
-							<span
-								className='w-2 h-2 rounded-full animate-pulse'
-								style={{ background: "#4ade80" }}
-							/>
-							<span
-								className='font-mono text-xs'
-								style={{ color: "#4ade80" }}
-							>
-								ACTIVE
-							</span>
-						</div>
-
-						{/* Headline */}
-						<h1
-							className='font-display font-bold leading-[1.05] mb-4'
-							style={{
-								fontSize: "clamp(2.2rem, 5vw, 4rem)",
-								color: "var(--text-primary)",
-							}}
+						<h2
+							className='font-display font-bold leading-none mb-5'
+							style={{ fontSize: "clamp(2.4rem, 4.4vw, 4.25rem)" }}
 						>
-							Smart DevOps{" "}
-							<span className='gradient-text'>Automation</span>
-							<br />
-							with Agentic AI
-						</h1>
+							<span className='gradient-text'>Synapse CI</span>
+						</h2>
 
-						{/* Subtitle */}
 						<p
 							className='text-lg leading-relaxed mb-8 max-w-xl'
 							style={{
@@ -156,17 +152,15 @@ export default function Hero() {
 								fontFamily: "var(--font-sans)",
 							}}
 						>
-							Synapse-CI is a research-grade platform that
-							combines{" "}
+							Synapse-CI is a research-grade platform that combines{" "}
 							<strong style={{ color: "var(--accent-cyan)" }}>
 								Human-in-the-Loop CI/CD orchestration
 							</strong>
 							, governed knowledge management, IaC generation,
 							adaptive test prioritization, and automated chaos
-							validation — all under one connected lifecycle.
+							validation - all under one connected lifecycle.
 						</p>
 
-						{/* CTA */}
 						<div className='flex flex-wrap gap-4 mb-10'>
 							<a
 								href='#domain'
@@ -182,7 +176,6 @@ export default function Hero() {
 							</a>
 						</div>
 
-						{/* Stat pills */}
 						<div className='grid grid-cols-2 gap-3'>
 							{STATS.map(({ icon: Icon, label, value }) => (
 								<div
@@ -195,31 +188,23 @@ export default function Hero() {
 								>
 									<div
 										className='w-8 h-8 rounded flex items-center justify-center shrink-0'
-										style={{
-											background: "rgba(34,211,238,0.1)",
-										}}
+										style={{ background: "rgba(34,211,238,0.1)" }}
 									>
 										<Icon
 											size={15}
-											style={{
-												color: "var(--accent-cyan)",
-											}}
+											style={{ color: "var(--accent-cyan)" }}
 										/>
 									</div>
 									<div>
 										<div
 											className='font-mono text-xs'
-											style={{
-												color: "var(--text-muted)",
-											}}
+											style={{ color: "var(--text-muted)" }}
 										>
 											{label}
 										</div>
 										<div
 											className='font-display font-semibold text-sm'
-											style={{
-												color: "var(--text-primary)",
-											}}
+											style={{ color: "var(--text-primary)" }}
 										>
 											{value}
 										</div>
@@ -229,9 +214,7 @@ export default function Hero() {
 						</div>
 					</div>
 
-					{/* Right: Terminal */}
-					<div className='relative'>
-						{/* Glow behind terminal */}
+					<div className='relative lg:pt-5'>
 						<div
 							className='absolute inset-0 -m-8 rounded-2xl pointer-events-none'
 							style={{
@@ -268,34 +251,24 @@ export default function Hero() {
 								className='space-y-1'
 								style={{ minHeight: "220px" }}
 							>
-								{TERMINAL_LINES.slice(0, visibleLines).map(
-									(line, i) => (
-										<div
-											key={i}
-											className='font-mono text-sm leading-6'
-											style={{ color: line.color }}
-										>
-											<span
-												style={{
-													color: "var(--text-muted)",
-												}}
-											>
-												{line.prefix}
-											</span>
-											{line.text}
-										</div>
-									),
-								)}
+								{TERMINAL_LINES.slice(0, visibleLines).map((line, i) => (
+									<div
+										key={i}
+										className='font-mono text-sm leading-6'
+										style={{ color: line.color }}
+									>
+										<span style={{ color: "var(--text-muted)" }}>
+											{line.prefix}
+										</span>
+										{line.text}
+									</div>
+								))}
 								{visibleLines < TERMINAL_LINES.length && (
 									<div
 										className='font-mono text-sm'
 										style={{ color: "var(--accent-cyan)" }}
 									>
-										<span
-											style={{
-												color: "var(--text-muted)",
-											}}
-										>
+										<span style={{ color: "var(--text-muted)" }}>
 											${" "}
 										</span>
 										<span
@@ -311,7 +284,6 @@ export default function Hero() {
 								)}
 							</div>
 
-							{/* Progress bar */}
 							<div
 								className='mt-4 pt-4'
 								style={{ borderTop: "1px solid var(--border)" }}
@@ -321,13 +293,9 @@ export default function Hero() {
 									style={{ color: "var(--text-muted)" }}
 								>
 									<span>pipeline progress</span>
-									<span
-										style={{ color: "var(--accent-cyan)" }}
-									>
+									<span style={{ color: "var(--accent-cyan)" }}>
 										{Math.round(
-											(visibleLines /
-												TERMINAL_LINES.length) *
-												100,
+											(visibleLines / TERMINAL_LINES.length) * 100,
 										)}
 										%
 									</span>
@@ -350,7 +318,6 @@ export default function Hero() {
 					</div>
 				</div>
 
-				{/* Scroll indicator */}
 				<div className='flex justify-center mt-16'>
 					<a
 						href='#domain'

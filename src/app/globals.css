@@ -269,6 +269,192 @@ body {
   border-radius: 2px;
 }
 
+/* Methodology flow */
+.methodology-flow-panel {
+  position: relative;
+  min-height: 250px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(34, 211, 238, 0.12), transparent 35%),
+    radial-gradient(circle at 80% 80%, rgba(251, 191, 36, 0.12), transparent 35%),
+    var(--bg-secondary);
+  border: 1px solid var(--border);
+}
+
+.methodology-flow-grid {
+  position: relative;
+  min-height: 210px;
+}
+
+.methodology-node {
+  position: absolute;
+  min-width: 124px;
+  padding: 0.7rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  animation: methodologyFloat 4.5s ease-in-out infinite;
+}
+
+.dark .methodology-node {
+  background: rgba(10, 22, 40, 0.75);
+}
+
+.methodology-node-top-left { top: 0; left: 0; animation-delay: 0s; }
+.methodology-node-top-right { top: 0; right: 0; animation-delay: 0.6s; }
+.methodology-node-bottom-left { bottom: 0; left: 12px; animation-delay: 1.1s; }
+.methodology-node-bottom-right { bottom: 0; right: 12px; animation-delay: 1.7s; }
+
+.methodology-flow-core {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  width: 148px;
+  height: 148px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background:
+    radial-gradient(circle at center, rgba(34, 211, 238, 0.2), rgba(34, 211, 238, 0.06) 45%, transparent 72%),
+    var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  color: var(--text-primary);
+  text-align: center;
+  box-shadow: 0 0 30px var(--glow-cyan);
+}
+
+.methodology-flow-ping {
+  position: absolute;
+  inset: 14px;
+  border-radius: inherit;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  animation: methodologyPulse 2.4s ease-out infinite;
+}
+
+.methodology-link {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+}
+
+.methodology-link-top-left {
+  top: 56px;
+  left: 98px;
+  width: calc(50% - 110px);
+  transform: rotate(16deg);
+  transform-origin: left center;
+}
+
+.methodology-link-top-right {
+  top: 56px;
+  right: 98px;
+  width: calc(50% - 110px);
+  transform: rotate(-16deg);
+  transform-origin: right center;
+}
+
+.methodology-link-bottom-left {
+  bottom: 54px;
+  left: 110px;
+  width: calc(50% - 118px);
+  transform: rotate(-12deg);
+  transform-origin: left center;
+}
+
+.methodology-link-bottom-right {
+  bottom: 54px;
+  right: 110px;
+  width: calc(50% - 118px);
+  transform: rotate(12deg);
+  transform-origin: right center;
+}
+
+.methodology-signal {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  box-shadow: 0 0 14px currentColor;
+}
+
+.methodology-signal-top {
+  top: 52px;
+  left: 25%;
+  color: var(--accent-cyan);
+  background: currentColor;
+  animation: methodologyTraverseTop 3.6s linear infinite;
+}
+
+.methodology-signal-bottom {
+  bottom: 50px;
+  right: 25%;
+  color: var(--accent-amber);
+  background: currentColor;
+  animation: methodologyTraverseBottom 4.1s linear infinite;
+}
+
+@keyframes methodologyFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes methodologyPulse {
+  0% { opacity: 0.8; transform: scale(0.9); }
+  70% { opacity: 0; transform: scale(1.12); }
+  100% { opacity: 0; transform: scale(1.18); }
+}
+
+@keyframes methodologyTraverseTop {
+  0% { transform: translateX(-18px); opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateX(150px); opacity: 0; }
+}
+
+@keyframes methodologyTraverseBottom {
+  0% { transform: translateX(18px); opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateX(-150px); opacity: 0; }
+}
+
+@media (max-width: 1024px) {
+  .methodology-flow-panel {
+    min-height: 220px;
+  }
+
+  .methodology-flow-grid {
+    min-height: 180px;
+  }
+
+  .methodology-node {
+    min-width: 108px;
+    font-size: 0.65rem;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .methodology-flow-core {
+    width: 124px;
+    height: 124px;
+  }
+
+  .methodology-link-top-left,
+  .methodology-link-top-right,
+  .methodology-link-bottom-left,
+  .methodology-link-bottom-right {
+    width: calc(50% - 96px);
+  }
+}
+
 /* Milestone timeline */
 .timeline-item::before {
   content: '';

@@ -30,13 +30,13 @@ const SUPERVISORS = [
 const EXTERNAL_SUPERVISORS = [
 	{
 		id: "external-supervisor",
-		name: "External Supervisor Name",
+		name: "Mr. Chirath Bandara",
 		role: "External Supervisor",
-		affiliation: "Industry / Organization Name",
-		department: "Research Collaboration Contact",
-		email: "external.supervisor@example.com",
-		photo: "/assets/team/external-supervisor.jpg",
-		linkedin: "#",
+		affiliation: "Wiley Global Technology (Pvt) Limited",
+		department: "Monitoring and Observability",
+		email: "chirathb14@gmail.com",
+		photo: "/assets/supervisor/chirath.png",
+		linkedin: "https://lk.linkedin.com/in/chirathb14",
 	},
 ];
 
@@ -48,7 +48,7 @@ const MEMBERS = [
 		studentId: "IT22338402",
 		component: "Repository Analyzer and Deployment Agent",
 		email: "kaweesha.mr@gmail.com",
-		photo: "/assets/team/member1.jpg",
+		photo: "/assets/team/member_1.png",
 		github: "https://github.com/Kaweesha-mr",
 		linkedin: "https://www.linkedin.com/in/kaweeshamr/",
 	},
@@ -70,7 +70,7 @@ const MEMBERS = [
 		studentId: "IT22914828",
 		component: "Test Prioratization",
 		email: "fyashodha@gmail.com",
-		photo: "/assets/team/member3.jpg",
+		photo: "/assets/team/member_3.png",
 		github: "https://github.com/Yashoda-Fr",
 		linkedin: "https://www.linkedin.com/in/yashodha-fernando-16b249244/",
 	},

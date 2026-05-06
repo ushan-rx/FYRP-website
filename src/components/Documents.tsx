@@ -32,9 +32,11 @@ const DOCUMENTS = [
 		id: "checklist-2",
 		title: "Checklist Document 2",
 		desc: "Progress checklist for Phase 2 — covers integration, testing, and evaluation milestones with supervisor sign-offs.",
-		status: "pending",
-		viewLink: "#",
-		downloadLink: "#",
+		status: "available",
+		viewLink:
+			"https://docs.google.com/spreadsheets/d/1fhlTbc73vbVYYE468_1zx3jDtV7az3_s/edit?usp=sharing&ouid=108819399519024115371&rtpof=true&sd=true",
+		downloadLink:
+			"https://docs.google.com/spreadsheets/d/1fhlTbc73vbVYYE468_1zx3jDtV7az3_s/edit?usp=sharing&ouid=108819399519024115371&rtpof=true&sd=true",
 		tag: "Checklist",
 		color: "#a78bfa",
 	},
@@ -42,9 +44,11 @@ const DOCUMENTS = [
 		id: "final-doc-main",
 		title: "Final Document (Group)",
 		desc: "Comprehensive group report covering the complete Synapse-CI platform design, implementation, evaluation, and conclusions.",
-		status: "pending",
-		viewLink: "#",
-		downloadLink: "#",
+		status: "available",
+		viewLink:
+			"https://docs.google.com/document/d/12UmBtrssvUjGet2GHBmWGEcpZqh65BC7/edit?usp=sharing&ouid=108819399519024115371&rtpof=true&sd=true",
+		downloadLink:
+			"https://docs.google.com/document/d/12UmBtrssvUjGet2GHBmWGEcpZqh65BC7/edit?usp=sharing&ouid=108819399519024115371&rtpof=true&sd=true",
 		tag: "Final Report",
 		color: "#4ade80",
 	},
@@ -52,9 +56,11 @@ const DOCUMENTS = [
 		id: "final-doc-member1",
 		title: "Individual Report – Member 1",
 		desc: "Individual report covering personal contributions to the CI/CD Orchestrator and HITL governance subsystem.",
-		status: "pending",
-		viewLink: "#",
-		downloadLink: "#",
+		status: "available",
+		viewLink:
+			"https://docs.google.com/document/d/1Nz9yh9Kaanm7R7LhRoe6DSnS8veF84W0/edit?usp=drive_link&ouid=108819399519024115371&rtpof=true&sd=true",
+		downloadLink:
+			"https://docs.google.com/document/d/1Nz9yh9Kaanm7R7LhRoe6DSnS8veF84W0/edit?usp=drive_link&ouid=108819399519024115371&rtpof=true&sd=true",
 		tag: "Individual",
 		color: "#fb7185",
 	},
@@ -62,9 +68,11 @@ const DOCUMENTS = [
 		id: "final-doc-member2",
 		title: "Individual Report – Member 2",
 		desc: "Individual report covering personal contributions to the IaC generation and repository analysis subsystem.",
-		status: "pending",
-		viewLink: "#",
-		downloadLink: "#",
+		status: "available",
+		viewLink:
+			"https://docs.google.com/document/d/17--A2UISioBqOlnYyh_pcVGzz6jfoM4t/edit?usp=sharing&ouid=108819399519024115371&rtpof=true&sd=true",
+		downloadLink:
+			"https://docs.google.com/document/d/17--A2UISioBqOlnYyh_pcVGzz6jfoM4t/edit?usp=sharing&ouid=108819399519024115371&rtpof=true&sd=true",
 		tag: "Individual",
 		color: "#fb7185",
 	},
@@ -72,9 +80,11 @@ const DOCUMENTS = [
 		id: "final-doc-member3",
 		title: "Individual Report – Member 3",
 		desc: "Individual report covering personal contributions to the adaptive test prioritization agent and CI integration.",
-		status: "pending",
-		viewLink: "#",
-		downloadLink: "#",
+		status: "available",
+		viewLink:
+			"https://docs.google.com/document/d/1vSGvwRO--sRkKI6y06VtkSgVfFhPJVS4/edit?usp=sharing&ouid=108819399519024115371&rtpof=true&sd=true",
+		downloadLink:
+			"https://docs.google.com/document/d/1vSGvwRO--sRkKI6y06VtkSgVfFhPJVS4/edit?usp=sharing&ouid=108819399519024115371&rtpof=true&sd=true",
 		tag: "Individual",
 		color: "#fb7185",
 	},
@@ -82,9 +92,11 @@ const DOCUMENTS = [
 		id: "final-doc-member4",
 		title: "Individual Report – Member 4",
 		desc: "Individual report covering personal contributions to the chaos & resilience validation agent and scoring engine.",
-		status: "pending",
-		viewLink: "#",
-		downloadLink: "#",
+		status: "available",
+		viewLink:
+			"https://docs.google.com/document/d/1UpBO86JuDH9-fDicpuprWxUPypXtYbi_/edit?usp=sharing&ouid=108819399519024115371&rtpof=true&sd=true",
+		downloadLink:
+			"https://docs.google.com/document/d/1UpBO86JuDH9-fDicpuprWxUPypXtYbi_/edit?usp=sharing&ouid=108819399519024115371&rtpof=true&sd=true",
 		tag: "Individual",
 		color: "#fb7185",
 	},
