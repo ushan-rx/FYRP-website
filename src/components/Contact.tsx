@@ -58,14 +58,14 @@ export default function Contact() {
 									icon: Mail,
 									label: "General Enquiries",
 									value: "synapseci@gmail.com",
-									href: "mailto:synapseci@gmail.com",
+									href: "mailto:kaweesha.mr@gmail.com",
 									color: "var(--accent-cyan)",
 								},
 								{
 									icon: Github,
 									label: "GitHub Repository",
 									value: "github.com/synapse-ci",
-									href: "https://github.com/synapse-ci",
+									href: "https://github.com/Kaweesha-mr/Synapse-Ci",
 									color: "#a78bfa",
 								},
 								{
@@ -75,43 +75,53 @@ export default function Contact() {
 									href: "https://www.sliit.lk",
 									color: "var(--accent-amber)",
 								},
-							].map(({ icon: Icon, label, value, href, color }) => (
-								<a
-									key={label}
-									href={href}
-									target={href.startsWith("mailto") ? undefined : "_blank"}
-									rel='noopener noreferrer'
-									className='flex items-center gap-4 p-4 rounded-xl transition-all group'
-									style={{
-										background: "var(--bg-card)",
-										border: "1px solid var(--border)",
-									}}
-								>
-									<div
-										className='w-10 h-10 rounded-lg flex items-center justify-center shrink-0 transition-all'
-										style={{ background: `${color}18` }}
+							].map(
+								({ icon: Icon, label, value, href, color }) => (
+									<a
+										key={label}
+										href={href}
+										target={
+											href.startsWith("mailto")
+												? undefined
+												: "_blank"
+										}
+										rel='noopener noreferrer'
+										className='flex items-center gap-4 p-4 rounded-xl transition-all group'
+										style={{
+											background: "var(--bg-card)",
+											border: "1px solid var(--border)",
+										}}
 									>
-										<Icon
-											size={18}
-											style={{ color }}
-										/>
-									</div>
-									<div>
 										<div
-											className='font-mono text-xs mb-0.5'
-											style={{ color: "var(--text-muted)" }}
+											className='w-10 h-10 rounded-lg flex items-center justify-center shrink-0 transition-all'
+											style={{ background: `${color}18` }}
 										>
-											{label}
+											<Icon
+												size={18}
+												style={{ color }}
+											/>
 										</div>
-										<div
-											className='font-sans text-sm font-medium'
-											style={{ color: "var(--text-primary)" }}
-										>
-											{value}
+										<div>
+											<div
+												className='font-mono text-xs mb-0.5'
+												style={{
+													color: "var(--text-muted)",
+												}}
+											>
+												{label}
+											</div>
+											<div
+												className='font-sans text-sm font-medium'
+												style={{
+													color: "var(--text-primary)",
+												}}
+											>
+												{value}
+											</div>
 										</div>
-									</div>
-								</a>
-							))}
+									</a>
+								),
+							)}
 						</div>
 
 						<div
@@ -142,13 +152,20 @@ export default function Contact() {
 								className='leading-relaxed'
 								style={{ color: "var(--text-secondary)" }}
 							>
-								<span style={{ color: "var(--accent-cyan)" }}># </span>
+								<span style={{ color: "var(--accent-cyan)" }}>
+									#{" "}
+								</span>
 								This is an active research project at SLIIT.
 								<br />
-								<span style={{ color: "var(--accent-cyan)" }}># </span>
-								Feedback and collaboration inquiries are welcome.
+								<span style={{ color: "var(--accent-cyan)" }}>
+									#{" "}
+								</span>
+								Feedback and collaboration inquiries are
+								welcome.
 								<br />
-								<span style={{ color: "var(--accent-cyan)" }}># </span>
+								<span style={{ color: "var(--accent-cyan)" }}>
+									#{" "}
+								</span>
 								Response time: 2-3 business days.
 							</p>
 						</div>
@@ -181,8 +198,8 @@ export default function Contact() {
 										fontFamily: "var(--font-sans)",
 									}}
 								>
-									Your message was sent successfully. We&apos;ll get back to
-									you shortly.
+									Your message was sent successfully.
+									We&apos;ll get back to you shortly.
 								</p>
 								<button
 									onClick={() => setShowSuccess(false)}
@@ -224,7 +241,9 @@ export default function Contact() {
 										<label
 											htmlFor='contact-name'
 											className='block font-mono text-xs mb-2 uppercase tracking-wider'
-											style={{ color: "var(--text-muted)" }}
+											style={{
+												color: "var(--text-muted)",
+											}}
 										>
 											Your Name
 										</label>
@@ -238,7 +257,8 @@ export default function Contact() {
 											required
 											className='w-full px-4 py-3 rounded-lg font-sans text-sm outline-none transition-all'
 											style={{
-												background: "var(--bg-secondary)",
+												background:
+													"var(--bg-secondary)",
 												border: "1px solid var(--border)",
 												color: "var(--text-primary)",
 											}}
@@ -247,7 +267,8 @@ export default function Contact() {
 													"var(--border-strong)")
 											}
 											onBlur={(e) =>
-												(e.target.style.borderColor = "var(--border)")
+												(e.target.style.borderColor =
+													"var(--border)")
 											}
 										/>
 										<ValidationError
@@ -262,7 +283,9 @@ export default function Contact() {
 										<label
 											htmlFor='contact-email'
 											className='block font-mono text-xs mb-2 uppercase tracking-wider'
-											style={{ color: "var(--text-muted)" }}
+											style={{
+												color: "var(--text-muted)",
+											}}
 										>
 											Email Address
 										</label>
@@ -276,7 +299,8 @@ export default function Contact() {
 											required
 											className='w-full px-4 py-3 rounded-lg font-sans text-sm outline-none transition-all'
 											style={{
-												background: "var(--bg-secondary)",
+												background:
+													"var(--bg-secondary)",
 												border: "1px solid var(--border)",
 												color: "var(--text-primary)",
 											}}
@@ -285,7 +309,8 @@ export default function Contact() {
 													"var(--border-strong)")
 											}
 											onBlur={(e) =>
-												(e.target.style.borderColor = "var(--border)")
+												(e.target.style.borderColor =
+													"var(--border)")
 											}
 										/>
 										<ValidationError
@@ -300,7 +325,9 @@ export default function Contact() {
 										<label
 											htmlFor='contact-message'
 											className='block font-mono text-xs mb-2 uppercase tracking-wider'
-											style={{ color: "var(--text-muted)" }}
+											style={{
+												color: "var(--text-muted)",
+											}}
 										>
 											Message or Query
 										</label>
@@ -314,7 +341,8 @@ export default function Contact() {
 											required
 											className='w-full px-4 py-3 rounded-lg font-sans text-sm outline-none transition-all resize-none'
 											style={{
-												background: "var(--bg-secondary)",
+												background:
+													"var(--bg-secondary)",
 												border: "1px solid var(--border)",
 												color: "var(--text-primary)",
 											}}
@@ -323,7 +351,8 @@ export default function Contact() {
 													"var(--border-strong)")
 											}
 											onBlur={(e) =>
-												(e.target.style.borderColor = "var(--border)")
+												(e.target.style.borderColor =
+													"var(--border)")
 											}
 										/>
 										<ValidationError
@@ -345,7 +374,9 @@ export default function Contact() {
 										className='w-full btn-primary flex items-center justify-center gap-2 py-3'
 									>
 										<Send size={14} />
-										{state.submitting ? "Sending..." : "Send Message"}
+										{state.submitting
+											? "Sending..."
+											: "Send Message"}
 									</button>
 								</form>
 							</div>
